@@ -9,7 +9,8 @@
 
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
+    body 
+    {
       font-family: 'Inter', sans-serif;
       color: #222;
       line-height: 1.6;
@@ -129,19 +130,24 @@
 </head>
 
 <body>
+<header class="site-header">
+  <div class="container header-inner">
 
-<header>
-  <div class="nav">
-    <strong style="color:white;">TRSI CONSEIL</strong>
-    <nav>
-      <a href="#home">Accueil</a>
-      <a href="#about">À propos</a>
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="logo.png" alt="TRSI Conseil">
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="main-nav">
+      <a href="#accueil">Accueil</a>
+      <a href="#apropos">À propos</a>
       <a href="#services">Services</a>
       <a href="#contact">Contact</a>
     </nav>
+
   </div>
 </header>
-
 <section id="home" class="hero">
   <div>
     <h1>TRSI CONSEIL</h1>
