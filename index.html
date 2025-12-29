@@ -1,23 +1,139 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>TRSI CONSEIL – Conseil & Solutions Informatiques</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.85);
+      z-index: 1000;
+    }
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+      background: linear-gradient(120deg,#001f3f,#004aad);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 100px 20px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 2.2rem;
+    }
+
+    /* SERVICES */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+    }
+    .card h3 {
+      margin-bottom: 15px;
+      color: #004aad;
+    }
+
+    /* CONTACT */
+    form {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, textarea, button {
+      padding: 12px;
+      font-size: 1rem;
+    }
+    button {
+      background: #004aad;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 30px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.4rem; }
+      header { position: static; }
+    }
+  </style>
 </head>
+
 <body>
 
-<header class="header">
-  <div class="container">
-    <img src="logo.png" alt="TRSI CONSEIL" class="logo">
-
-    <nav class="nav">
+<header>
+  <div class="nav">
+    <strong style="color:white;">TRSI CONSEIL</strong>
+    <nav>
       <a href="#home">Accueil</a>
       <a href="#about">À propos</a>
       <a href="#services">Services</a>
@@ -26,85 +142,67 @@
   </div>
 </header>
 
-<!-- HERO -->
 <section id="home" class="hero">
-  <div class="hero-content">
+  <div>
     <h1>TRSI CONSEIL</h1>
-    <p>
-      Cabinet de conseil en management et solutions informatiques innovantes
-    </p>
-    <a href="#contact" class="btn-primary">Nous contacter</a>
+    <p>Cabinet de conseil et solutions informatiques  
+       accompagnant les organisations dans leur transformation digitale.</p>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="section">
+<section id="about">
   <div class="container">
     <h2>À propos</h2>
-    <p>
-      TRSI CONSEIL accompagne les organisations dans leur transformation
-      à travers un conseil stratégique, des solutions informatiques adaptées
-      et un accompagnement orienté performance et efficacité.
+    <p style="text-align:center; max-width:800px; margin:auto;">
+      TRSI CONSEIL se spécialise dans la conception de solutions informatiques,
+      la gestion de projets IT, le DevOps, la data et l’automatisation des processus.
     </p>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services" class="section section-light">
+<section id="services">
   <div class="container">
     <h2>Nos services</h2>
 
     <div class="cards">
       <div class="card">
-        <h3>Conseil & stratégie</h3>
-        <p>
-          Accompagnement en management, organisation et pilotage stratégique
-          des systèmes d’information.
-        </p>
+        <h3>Gestion de projet IT</h3>
+        <p>AMOA, pilotage, coordination et sécurisation des projets informatiques.</p>
+      </div>
+
+      <div class="card">
+        <h3>DevOps & Cloud</h3>
+        <p>Automatisation CI/CD, cloud, industrialisation et fiabilité des systèmes.</p>
+      </div>
+
+      <div class="card">
+        <h3>Développement & Data</h3>
+        <p>Applications sur mesure, data engineering et data science.</p>
       </div>
 
       <div class="card">
         <h3>Transformation digitale</h3>
-        <p>
-          Mise en œuvre de solutions numériques innovantes
-          pour améliorer la performance et l’agilité des organisations.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Solutions informatiques</h3>
-        <p>
-          Conception, intégration et assistance de solutions
-          informatiques sur mesure adaptées à vos besoins.
-        </p>
+        <p>Optimisation des processus métiers et innovation technologique.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="section">
+<section id="contact">
   <div class="container">
     <h2>Contact</h2>
 
-    <form action="https://formspree.io/f/xlgeoqvo" method="POST" class="contact-form">
+    <form action="https://formspree.io/f/xlgeoqvo" method="POST">
       <input type="text" name="nom" placeholder="Votre nom" required>
       <input type="email" name="email" placeholder="Votre email" required>
       <textarea name="message" placeholder="Votre message" required></textarea>
-      <button type="submit" class="btn-primary">Envoyer</button>
+      <button type="submit">Envoyer</button>
     </form>
-
-    <div class="contact-infos">
-      <p>📧 contact@trsi-conseil.com</p>
-      <p>📞 +33 7 53 83 60 27</p>
-    </div>
   </div>
 </section>
 
-<footer class="footer">
-  <div class="container">
-    <p>© 2010 TRSI CONSEIL – Tous droits réservés</p>
-  </div>
+<footer>
+© TRSI CONSEIL – Tous droits réservés
 </footer>
 
 </body>
