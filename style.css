@@ -278,3 +278,11 @@ footer {
   text-align: center;
 }
 
+/* Réduit l’espace entre les lignes du paragraphe "À propos" */
+#about p {
+  line-height: 1.4; /* hauteur des lignes plus serrée */
+  margin-top: 10px;  /* moins d’espace au-dessus */
+  margin-bottom: 10px; /* moins d’espace en dessous */
+}
+
+
