@@ -280,4 +280,13 @@ footer {
     font-size: 30px;
   }
 }
+@media (max-width: 768px) {
+  header nav {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
 
