@@ -21,7 +21,6 @@ h1, h2, h3 {
 /* =========================
    HEADER (PRO / AUBERTECH)
 ========================= */
-
 .site-header {
   background: #ffffff;
   border-bottom: 1px solid #eaeaea;
@@ -33,64 +32,92 @@ h1, h2, h3 {
 .header-container {
   max-width: 1200px;
   margin: auto;
-  padding: 16px 24px;
+  padding: 14px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-/* LOGO — TAILLE PRO */
 .logo img {
-  height: 56px;       /* 👈 visible mais maîtrisé */
+  height: 48px;   /* ni trop petit ni trop gros */
   width: auto;
-  display: block;
 }
 
-/* NAV */
 .main-nav a {
   margin-left: 28px;
   text-decoration: none;
-  color: #0b2a4a;
+  color: #0b1d3a;
   font-weight: 600;
   font-size: 15px;
 }
 
 .main-nav a:hover {
-  color: #0056d6;
+  color: #004aad;
 }
+
+.nav-cta {
+  padding: 8px 16px;
+  border: 1px solid #004aad;
+  border-radius: 6px;
+  color: #004aad;
+}
+
+
 
 /* =========================
    HERO (BLEU AUBERTECH)
 ========================= */
+<section class="hero">
+  <div class="hero-inner">
+    <h1>
+      Conseil & solutions<br>
+      <span>informatiques sur mesure</span>
+    </h1>
 
+    <p>
+      TRSI Conseil accompagne les organisations dans leurs projets IT,
+      cloud, data et transformation digitale.
+    </p>
+
+    <a href="#contact" class="btn-primary">Parlons de votre projet</a>
+  </div>
+</section>
 .hero {
-  background: linear-gradient(135deg, #0b2a4a 0%, #0056d6 100%);
+  background: linear-gradient(135deg, #0b1d3a, #004aad);
   color: white;
-  text-align: center;
-  padding: 110px 20px;
+  padding: 120px 20px;
+}
+
+.hero-inner {
+  max-width: 900px;
+  margin: auto;
 }
 
 .hero h1 {
-  font-size: 42px;
-  margin-bottom: 18px;
+  font-size: 48px;
+  line-height: 1.15;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  color: #7fb3ff;
 }
 
 .hero p {
   font-size: 18px;
-  max-width: 720px;
-  margin: auto;
+  max-width: 700px;
 }
 
-/* CTA */
-.btn {
+.btn-primary {
   display: inline-block;
-  margin-top: 30px;
-  background: white;
-  color: #0b2a4a;
+  margin-top: 35px;
   padding: 14px 32px;
-  border-radius: 6px;
-  text-decoration: none;
+  background: white;
+  color: #004aad;
+  border-radius: 8px;
   font-weight: 600;
+  text-decoration: none;
 }
 
 /* =========================
