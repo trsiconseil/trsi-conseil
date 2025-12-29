@@ -1,143 +1,11 @@
-body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  color: #1a1a1a;
+/* =========================
+   BASE
+========================= */
+
+* {
+  box-sizing: border-box;
 }
 
-header {
-  background: #ffffff;
-  border-bottom: 1px solid #eee;
-}
-
-.container {
-  max-width: 1100px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-}
-
-.logo {
-  height: 70px;
-}
-
-nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #004aad;
-  font-weight: bold;
-}
-
-.hero {
-  background: #004aad;
-  color: white;
-  text-align: center;
-  padding: 40px 20px;
-}
-
-.btn {
-  background: white;
-  color: #004aad;
-  padding: 12px 20px;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-}
-
-.section {
-  max-width: 900px;
-  margin: auto;
-  padding: 60px 20px;
-}
-
-.section.light {
-  background: #f5f7fa;
-}
-
-.services li {
-  margin: 10px 0;
-}
-
-form {
-  max-width: 400px;
-  margin: auto;
-}
-
-input, textarea, button {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-}
-
-button {
-  background: #004aad;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-footer {
-  background: #f1f1f1;
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
-}
-@media (max-width: 768px) {
-
-  header .container {
-    flex-direction: column;
-  }
-
-  nav {
-    margin-top: 10px;
-  }
-
-  nav a {
-    margin: 10px;
-    display: inline-block;
-  }
-
-  .hero {
-    padding: 60px 20px;
-  }
-
-  h1 {
-    font-size: 28px;
-  }
-
-  h2 {
-    font-size: 22px;
-  }
-
-  .section {
-    padding: 40px 20px;
-  }
-
-  form {
-    width: 100%;
-  }
-}
-/* === Cartes services (style aubertech) === */
-
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-}
-
-.card {
-  background: white;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-}
-
-.card h3 {
-  margin-top: 0;
-  color: #004aad;
-}
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -147,43 +15,59 @@ body {
 
 h1, h2, h3 {
   font-weight: 600;
+  margin-top: 0;
 }
 
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 0 20px;
-}
+/* =========================
+   HEADER
+========================= */
+
 header {
-  background: #fff;
+  background: #ffffff;
   border-bottom: 1px solid #eee;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 1000;
 }
 
 header .container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 15px 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  height: 70px;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 42px;      /* 👈 LOGO MAÎTRISÉ */
+  width: auto;
 }
 
 nav a {
-  margin-left: 25px;
+  margin-left: 30px;
   text-decoration: none;
   color: #004aad;
-  font-weight: 500;
+  font-weight: 600;
 }
+
+nav a:hover {
+  color: #002f6c;
+}
+
+/* =========================
+   HERO
+========================= */
+
 .hero {
   background: linear-gradient(135deg, #004aad, #0066ff);
   color: white;
   text-align: center;
-  padding: 100px 20px;
+  padding: 70px 20px; /* 👈 cadre bleu raccourci */
 }
 
 .hero h1 {
-  font-size: 42px;
+  font-size: 40px;
   margin-bottom: 20px;
 }
 
@@ -203,6 +87,11 @@ nav a {
   text-decoration: none;
   font-weight: 600;
 }
+
+/* =========================
+   SECTIONS
+========================= */
+
 .section {
   max-width: 1000px;
   margin: auto;
@@ -212,6 +101,11 @@ nav a {
 .section.light {
   background: #f5f7fa;
 }
+
+/* =========================
+   SERVICES (CARDS)
+========================= */
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -228,19 +122,24 @@ nav a {
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
 }
 
 .card h3 {
-  margin-top: 0;
   color: #004aad;
 }
+
+/* =========================
+   FORMULAIRE
+========================= */
+
 form {
   max-width: 450px;
   margin: auto;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 12px;
   margin-bottom: 15px;
@@ -254,108 +153,4 @@ button {
   color: white;
   border: none;
   padding: 12px;
-  width: 100%;
-  border-radius: 6px;
-  font-weight: 600;
-  cursor: pointer;
-}
-footer {
-  background: #f1f1f1;
-  text-align: center;
-  padding: 30px;
-  font-size: 14px;
-}
-@media (max-width: 768px) {
-  header .container {
-    flex-direction: column;
-    height: auto;
-    padding: 15px;
-  }
-
-  nav a {
-    margin: 10px;
-  }
-
-  .hero h1 {
-    font-size: 30px;
-  }
-}
-@media (max-width: 768px) {
-  header nav {
-    display: none;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-}
-.site-header {
-  background: white;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-}
-
-.header-inner {
-  max-width: 1200px;
-  margin: auto;
-  padding: 15px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo img {
-  height: 42px;
-}
-
-.main-nav a {
-  margin-left: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  color: #111;
-}
-
-.main-nav a:hover {
-  color: #004aad;
-}
-/* ========================= */
-/* RESPONSIVE */
-/* ========================= */
-
-@media (max-width: 768px) {
-
-  .header-inner {
-    flex-direction: column;
-  }
-
-  .main-nav {
-    display: none;
-  }
-
-  .hero {
-    padding: 60px 20px;
-  }
-
-}
-.logo {
-  height: 40px;
-  width: auto;
-}
-.site-header {
-  background: white;
-  border-bottom: 1px solid #eee;
-}
-
-.header-container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 15px 20px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-
+  width: 100
