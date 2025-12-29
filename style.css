@@ -1,5 +1,5 @@
 /* =========================
-   BASE
+   RESET / BASE
 ========================= */
 
 * {
@@ -14,13 +14,10 @@ body {
   line-height: 1.6;
 }
 
-h1, h2, h3 {
-  font-weight: 600;
-}
-
 /* =========================
    HEADER (PRO / AUBERTECH)
 ========================= */
+
 .site-header {
   background: #ffffff;
   border-bottom: 1px solid #eaeaea;
@@ -38,86 +35,76 @@ h1, h2, h3 {
   justify-content: space-between;
 }
 
+/* LOGO : taille maîtrisée, visible, pro */
 .logo img {
-  height: 48px;   /* ni trop petit ni trop gros */
+  height: 48px;      /* ⬅️ taille équilibrée */
   width: auto;
+  display: block;
 }
 
+/* NAVIGATION */
 .main-nav a {
-  margin-left: 28px;
+  margin-left: 32px;
   text-decoration: none;
-  color: #0b1d3a;
   font-weight: 600;
   font-size: 15px;
+  color: #0b1d3a;
 }
 
 .main-nav a:hover {
   color: #004aad;
 }
 
+/* Bouton contact */
 .nav-cta {
-  padding: 8px 16px;
-  border: 1px solid #004aad;
+  padding: 8px 18px;
   border-radius: 6px;
-  color: #004aad;
+  background: #004aad;
+  color: white !important;
 }
 
-
+.nav-cta:hover {
+  background: #00307a;
+}
 
 /* =========================
-   HERO (BLEU AUBERTECH)
+   HERO (PREMIUM)
 ========================= */
-<section class="hero">
-  <div class="hero-inner">
-    <h1>
-      Conseil & solutions<br>
-      <span>informatiques sur mesure</span>
-    </h1>
 
-    <p>
-      TRSI Conseil accompagne les organisations dans leurs projets IT,
-      cloud, data et transformation digitale.
-    </p>
-
-    <a href="#contact" class="btn-primary">Parlons de votre projet</a>
-  </div>
-</section>
 .hero {
   background: linear-gradient(135deg, #0b1d3a, #004aad);
   color: white;
-  padding: 120px 20px;
+  padding: 110px 20px;
+  text-align: center;
 }
 
-.hero-inner {
-  max-width: 900px;
+.hero-content {
+  max-width: 800px;
   margin: auto;
 }
 
 .hero h1 {
   font-size: 48px;
-  line-height: 1.15;
   font-weight: 700;
-  margin-bottom: 25px;
-}
-
-.hero h1 span {
-  color: #7fb3ff;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
 }
 
 .hero p {
   font-size: 18px;
-  max-width: 700px;
+  opacity: 0.9;
 }
 
-.btn-primary {
+/* CTA */
+.btn {
   display: inline-block;
   margin-top: 35px;
-  padding: 14px 32px;
   background: white;
   color: #004aad;
-  border-radius: 8px;
-  font-weight: 600;
+  padding: 14px 32px;
+  border-radius: 6px;
   text-decoration: none;
+  font-weight: 600;
 }
 
 /* =========================
@@ -129,7 +116,7 @@ h1, h2, h3 {
 }
 
 .section.light {
-  background: #f4f7fb;
+  background: #f5f7fb;
 }
 
 .container {
@@ -139,50 +126,59 @@ h1, h2, h3 {
 
 h2 {
   text-align: center;
+  font-size: 32px;
+  color: #0b1d3a;
   margin-bottom: 40px;
-  color: #0b2a4a;
+}
+
+.center-text {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
 }
 
 /* =========================
-   SERVICES
+   SERVICES (CARDS + ICONES)
 ========================= */
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
   margin-top: 50px;
 }
 
 .card {
   background: white;
-  padding: 36px;
-  border-radius: 14px;
-  box-shadow: 0 18px 45px rgba(0,0,0,0.06);
-  transition: transform 0.25s ease;
+  padding: 36px 30px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.08);
 }
 
-.icon {
-  font-size: 36px;
+/* Icônes */
+.card .icon {
+  font-size: 38px;
   margin-bottom: 18px;
 }
 
 .card h3 {
-  color: #0b1d3a;
+  color: #004aad;
   margin-bottom: 12px;
 }
-
 
 /* =========================
    FORMULAIRE
 ========================= */
 
 form {
-  max-width: 460px;
+  max-width: 480px;
   margin: auto;
 }
 
@@ -197,11 +193,11 @@ textarea {
 }
 
 button {
-  background: #0056d6;
+  width: 100%;
+  padding: 14px;
+  background: #004aad;
   color: white;
   border: none;
-  padding: 13px;
-  width: 100%;
   border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
@@ -212,10 +208,10 @@ button {
 ========================= */
 
 footer {
-  background: #0b2a4a;
+  background: #0b1d3a;
   color: #ccc;
   text-align: center;
-  padding: 36px;
+  padding: 35px;
   font-size: 14px;
 }
 
@@ -227,20 +223,15 @@ footer {
 
   .header-container {
     flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .main-nav {
-    margin-top: 12px;
+    gap: 15px;
   }
 
   .main-nav a {
-    margin: 8px 0;
-    display: inline-block;
+    margin: 0 12px;
   }
 
   .hero h1 {
-    font-size: 30px;
+    font-size: 32px;
   }
 
   .hero {
