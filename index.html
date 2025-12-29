@@ -4,79 +4,107 @@
   <meta charset="UTF-8">
   <title>TRSI CONSEIL – Conseil & Solutions Informatiques</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
+<header class="header">
   <div class="container">
     <img src="logo.png" alt="TRSI CONSEIL" class="logo">
-    <nav>
-      <a href="#accueil">Accueil</a>
-      <a href="#apropos">À propos</a>
+
+    <nav class="nav">
+      <a href="#home">Accueil</a>
+      <a href="#about">À propos</a>
       <a href="#services">Services</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
 </header>
 
-<section id="accueil" class="hero">
-  <h1>TRSI CONSEIL</h1>
-  <p>Cabinet de conseil en management et solutions informatiques innovantes</p>
-  <a href="#contact" class="btn">Nous contacter</a>
+<!-- HERO -->
+<section id="home" class="hero">
+  <div class="hero-content">
+    <h1>TRSI CONSEIL</h1>
+    <p>
+      Cabinet de conseil en management et solutions informatiques innovantes
+    </p>
+    <a href="#contact" class="btn-primary">Nous contacter</a>
+  </div>
 </section>
 
-<section id="apropos" class="section">
-  <h2>À propos</h2>
-  <p>
-    TRSI CONSEIL accompagne les organisations dans leur transformation
-    grâce à des solutions innovantes et un accompagnement stratégique
-    orienté performance et efficacité.
-  </p>
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="container">
+    <h2>À propos</h2>
+    <p>
+      TRSI CONSEIL accompagne les organisations dans leur transformation
+      à travers un conseil stratégique, des solutions informatiques adaptées
+      et un accompagnement orienté performance et efficacité.
+    </p>
+  </div>
 </section>
 
-  <section id="services" class="section light">
-  <h2>Nos services</h2>
+<!-- SERVICES -->
+<section id="services" class="section section-light">
+  <div class="container">
+    <h2>Nos services</h2>
 
-  <div class="cards">
-    <div class="card">
-      <h3>Conseil & stratégie</h3>
-      <p>Accompagnement en management, organisation et pilotage stratégique.</p>
-    </div>
+    <div class="cards">
+      <div class="card">
+        <h3>Conseil & stratégie</h3>
+        <p>
+          Accompagnement en management, organisation et pilotage stratégique
+          des systèmes d’information.
+        </p>
+      </div>
 
-    <div class="card">
-      <h3>Transformation digitale</h3>
-      <p>Mise en place de solutions innovantes et performantes.</p>
-    </div>
+      <div class="card">
+        <h3>Transformation digitale</h3>
+        <p>
+          Mise en œuvre de solutions numériques innovantes
+          pour améliorer la performance et l’agilité des organisations.
+        </p>
+      </div>
 
-    <div class="card">
-      <h3>Solutions informatiques</h3>
-      <p>Développement, intégration et assistance sur mesure.</p>
+      <div class="card">
+        <h3>Solutions informatiques</h3>
+        <p>
+          Conception, intégration et assistance de solutions
+          informatiques sur mesure adaptées à vos besoins.
+        </p>
+      </div>
     </div>
   </div>
 </section>
 
-
+<!-- CONTACT -->
 <section id="contact" class="section">
-  <h2>Contact</h2>
+  <div class="container">
+    <h2>Contact</h2>
 
-  <form action="https://formspree.io/f/xlgeoqvo" method="POST">
-    <input type="text" name="nom" placeholder="Votre nom" required>
-    <input type="email" name="email" placeholder="Votre email" required>
-    <textarea name="message" placeholder="Votre message" required></textarea>
-    <button type="submit">Envoyer</button>
-  </form>
+    <form action="https://formspree.io/f/xlgeoqvo" method="POST" class="contact-form">
+      <input type="text" name="nom" placeholder="Votre nom" required>
+      <input type="email" name="email" placeholder="Votre email" required>
+      <textarea name="message" placeholder="Votre message" required></textarea>
+      <button type="submit" class="btn-primary">Envoyer</button>
+    </form>
 
-  <p class="infos">
-    📧 contact@trsi-conseil.com<br>
-    📞 +33 7 53 83 60 27
-  </p>
+    <div class="contact-infos">
+      <p>📧 contact@trsi-conseil.com</p>
+      <p>📞 +33 7 53 83 60 27</p>
+    </div>
+  </div>
 </section>
 
-<footer>
-  <p>© 2010 TRSI CONSEIL – Tous droits réservés</p>
+<footer class="footer">
+  <div class="container">
+    <p>© 2010 TRSI CONSEIL – Tous droits réservés</p>
+  </div>
 </footer>
 
 </body>
