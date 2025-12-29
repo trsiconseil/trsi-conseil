@@ -75,7 +75,7 @@ h1, h2, h3 {
 .hero {
   background: linear-gradient(135deg, #0f172a, #1e40af);
   color: white;
-  padding: 120px 20px;
+  padding: 70px 20px;
   text-align: center;
 }
 
@@ -264,7 +264,7 @@ footer {
   }
 
   .hero {
-    padding: 90px 20px;
+    padding: 60px 20px;
   }
 
   .hero h1 {
