@@ -83,3 +83,39 @@ footer {
   padding: 20px;
   font-size: 14px;
 }
+@media (max-width: 768px) {
+
+  header .container {
+    flex-direction: column;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  nav a {
+    margin: 10px;
+    display: inline-block;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .section {
+    padding: 40px 20px;
+  }
+
+  form {
+    width: 100%;
+  }
+}
+
