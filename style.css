@@ -289,4 +289,35 @@ footer {
     font-size: 2rem;
   }
 }
+.site-header {
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 42px;
+}
+
+.main-nav a {
+  margin-left: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #111;
+}
+
+.main-nav a:hover {
+  color: #004aad;
+}
 
