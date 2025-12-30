@@ -158,13 +158,13 @@ h2 {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 24px;
 }
 
 .card {
   background: white;
-  padding: 36px;
+  padding: 24px;
   border-radius: 14px;
   box-shadow: 0 12px 40px rgba(0,0,0,0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -176,13 +176,14 @@ h2 {
 }
 
 .card .icon {
-  font-size: 34px;
-  margin-bottom: 18px;
+  font-size: 28px;
+  margin-bottom: 14px;
 }
 
 .card h3 {
   color: #1e40af;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+  font-size: 18px;
 }
 
 /* =========================
