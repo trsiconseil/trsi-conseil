@@ -1,6 +1,6 @@
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* Version originale */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 32px;
 }
 
@@ -8,13 +8,13 @@
   background: white;
   padding: 36px;
   border-radius: 14px;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Pas d'ombre ni de bordure spéciale */
+  transition: transform 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  /* Pas d'ombre hover */
 }
 
 .card .icon {
@@ -41,9 +41,4 @@
   }
 }
 
-@media (max-width: 640px) {
-  .cards {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-}
+@media (max-width: 640
