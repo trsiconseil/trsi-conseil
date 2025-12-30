@@ -158,10 +158,9 @@ h2 {
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* Desktop : 3 cartes */
   gap: 24px;
 }
-
 .card {
   background: white;
   padding: 24px;
@@ -271,6 +270,20 @@ footer {
     font-size: 2.2rem;
   }
 }
+/* Tablette */
+@media (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ======= Saut de ligne ========== */
 .center-text {
   max-width: 800px;
